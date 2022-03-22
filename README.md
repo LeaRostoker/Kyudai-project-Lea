@@ -29,6 +29,7 @@ However you need to prepare your mesh in a certain way. We used Blender so we'll
 First, make you organize your meshes properly in your scene : 
   - each piece of furniture should be under a collection (ex. all elements of a chair shoild be in a same collection)
   - the collection should be named according to POSA's semantic naming (https://github.com/mohamedhassanmus/POSA/blob/main/mpcat40.tsv)
+
     <img src="ReadMe/Blender-collections.PNG"
      alt="add script to blender file"
      style="float: left; margin-right: 10px;" />
@@ -42,9 +43,11 @@ In "Scripting"，click on "+ New" and name your file.
      
 Then you can add the code. Yopu will find it in the SDF folder you chose, it's named "BlenderScript", just copy/paste it into Blender.
 Don't forget to change the path of the export folder.
+
 <img src="ReadMe/Blender-path.PNG"
      alt="add script to blender file"
      style="float: left; margin-right: 10px;" />
+     
 Once you're satisfied with your scene, in "Scripting", click the play button to export each part of your scene to the desired folder.
 
 ## Get 
