@@ -435,14 +435,13 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    // This will pick the best possible CUDA capable device
+    // This will pick the best possible CUDA capable device 
     int devID = findCudaDevice();
     cudaSetDeviceFlags(cudaDeviceScheduleBlockingSync);
     size_t free, total, initMem;
     cudaMemGetInfo(&free, &total);
     cout << "GPU " << devID << " memory: free=" << free << ", total=" << total << endl;
        
-
     CreateLevelSet(root_path + "public-room/", root_path + "public-room/output/sdf_out_model.ply", root_path + "public-room/output/");
     //UpdateSDF(root_path + "public-room/", root_path + "public-room/output/office-model.ply", root_path + "public-room/output/");
     
