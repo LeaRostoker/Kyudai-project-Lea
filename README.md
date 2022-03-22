@@ -91,6 +91,12 @@ And make sure to change the root path as well in main.cpp :
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
+In main.cpp, make sure to change GRID_SIZE, GRID_RES_X, GRID_RES_Y, GRID_RES_Z as needed : 
+
+<img src="ReadMe/sdf-gridparams.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
 And you can now click on the play button in Visual Studio to run the code.
 In the folder you chose for the ouput you can now find three files :
     - the resulting mesh (sdf_out_model.ply)
@@ -137,15 +143,32 @@ You should put 'your scene name'_sdf.npy and 'your scene name'_semantics.npy in 
 Will also need to create a JSON file named 'your scene name'.json.
 You will only need to add this line of code in this file : 
 ```
-{"min": [-5.12, -5.12, -5.12], "max": [5.12, 5.12, 5.12], "dim": 256, "bbox": [[5.12, 5.12, 10.22], [-5.12, -5.12, -0.02]], "badding_val": 6.3, "voxel_size": [0.04, 0.04, 0.04]}
+{"min": [-5.12, -5.12, -5.12], "max": [5.12, 5.12, 5.12], "dim": 256, "bbox": [[5.12, 5.12, 10.22], [-5.12, -5.12, -0.02]], "badding_val": 5.10, "voxel_size": [0.04, 0.04, 0.04]}
 ```
 
 Make sure to change the values according to the ones you entered in the SDF algorithm previously. 
-    "voxel_size" corresponds to GRID_SIZE_X, GRID_SIZE_Y, GRID_SIZE_Z.
+    "voxel_size" corresponds to GRID_RES_X, GRID_RES_Y, GRID_RES_Z.
     "dim" corresponds to GRID_SZE.
 
 <img src="ReadMe/sdf-gridparams.PNG"
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
+"min": [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2  ]
+"max": [ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2  ]
+
+For now you can add thoses values to "bbox" and "badding_val" : 
+    "bbox": [[ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2 + badding_val ], [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2 + badding_val ]]
+    "badding_val": 0.0
+
+You will need to adjust badding_val. To do so, we recommend to try POSA with this : 
+```
+python src/affordance.py --config cfg_files/contact_semantics.yaml --checkpoint_path $POSA_dir/trained_models/contact_semantics.pt --pkl_file_path $POSA_dir/POSA_rp_poses/rp_aaron_posed_001_0_0.pkl --scene_name 'your scene name' --render 1 --viz 1 --show-init-pos 1
+```
+
+You will see this kind of rendering of the init points : they should be above the sitting area. If they are too low or too high, will fail at placing the characters. So you need to adjust badding_val and bbox (which is the data read by POSA) so that the placement of the charcter works. Make a couple tests to adjust it.
+
+<img src="ReadMe/posa-initpoints.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
 
