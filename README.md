@@ -33,7 +33,7 @@ First, make you organize your meshes properly in your scene :
 In the SDF folder that you chose, you will find a Python script (BlenderScript) that you will need to add to your Blender mesh file.
 In scripting，choose Add 
 
-<img src="Readme/Blender-script.PNG"
+<img src="ReadMe/Blender-script.PNG"
      alt="add script to blender file"
      style="float: left; margin-right: 10px;" />
 
