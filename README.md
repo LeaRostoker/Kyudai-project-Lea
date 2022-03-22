@@ -183,9 +183,16 @@ In your POSA folder, in scr > misc_utils.py, you may also need to adjust offset_
 
 <img src="ReadMe/posa-createinitpts.PNG"
      alt="change path in main.cpp"
-     style="float: left; margin-right: 10px; width: 500px;" />
+     style="float: left; margin-right: 10px;" />
 
 ### Add multiple characters
 
 Once these adjusments are done, we can start placing multiple characters in the scene.
+To do so, run POSA on the first character of your choice. Once it is completed, get the resulting mesh of the placed character in POSA_dir > affordance > meshes > 'your scene name'
+
+Then change the function used in the SDF algorithm in main.cpp to UpdateSDF like this :
+
+<img src="ReadMe/posa-updatesdf.PNG"
+     alt="change function ran to UpdateSDF in main.cpp"
+     style="float: left; margin-right: 10px;" />
 
