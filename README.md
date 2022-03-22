@@ -167,12 +167,12 @@ Make sure to change the values according to the ones you entered in the SDF algo
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
-"min": [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2  ]
-"max": [ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2  ]
+    - "min": [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2  ]
+    - "max": [ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2  ]
 
 For now you can add thoses values to "bbox" and "badding_val" : 
-    "bbox": [[ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2 + badding_val ], [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2 + badding_val ]]
-    "badding_val": 0.0
+    - "bbox": [[ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2 + badding_val ], [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2 + badding_val ]]
+    - "badding_val": 0.0
 
 You will need to adjust badding_val. To do so, we recommend to try POSA with this : 
 ```
@@ -193,7 +193,7 @@ In your POSA folder, in scr > misc_utils.py, you may also need to adjust offset_
 
 ### Add multiple characters
 
-Once these adjusments are done, we can start placing multiple characters in the scene.
+Once these adjusments are done, we can start placing multiple characters in the scene. <br>
 To do so, run POSA on the first character of your choice. Once it is completed, get the resulting mesh of the placed character in POSA_dir > affordance > meshes > 'your scene name'
 
 Then change the function used in the SDF algorithm in main.cpp to UpdateSDF like this :
@@ -208,12 +208,12 @@ Make sure to change the circled area bellow to the folder where you will put the
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
-You can now run the program and you will obtain a new sdf.bin and label.bin describing the scene with the new character inside it.
+You can now run the program and you will obtain a new sdf.bin and label.bin describing the scene with the new character inside it. <br>
 Now if you want to add another character, repeat the steps explained above to make POSA work but give POSA the newly obtained sdf and label files (that you will have to turn again from .bin to .npy and so on).
 
-You can repeat all thoses steps with all the characters you want to add to the scene.
-You don't need to change the JSON file anymore though.
-This part of the project is complicated and requires a lot of time and energy.
-We are currently working on "linking" POSA and the SDF algorithm so that you can add multiple characters in a scene in fewer steps.
+You can repeat all thoses steps with all the characters you want to add to the scene. <br>
+You don't need to change the JSON file anymore though. <br>
+This part of the project is complicated and requires a lot of time and energy. <br>
+We are currently working on "linking" POSA and the SDF algorithm so that you can add multiple characters in a scene in fewer steps. 
 
 # Make your characters move in your scene using SAMP
