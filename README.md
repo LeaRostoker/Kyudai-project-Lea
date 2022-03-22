@@ -28,9 +28,9 @@ First, make you organize your meshes properly in your scene :
   - each piece of furniture should be under a collection (ex. all elements of a chair shoild be in a same collection)
   - the collection should be named according to POSA's semantic naming (https://github.com/mohamedhassanmus/POSA/blob/main/mpcat40.tsv)
 
-    <img src="ReadMe/Blender-collections.PNG"
-        alt="Organize in collections"
-        style="float: left; margin-right: 10px;" />
+<img src="ReadMe/Blender-collections.PNG"
+    alt="Organize in collections"
+    style="float: left; margin-right: 10px;" />
 
 In the SDF folder that you chose, you will find a Python script (BlenderScript) that you will need to add to your Blender mesh file.
 In "Scripting"，click on "+ New" and name your file.
