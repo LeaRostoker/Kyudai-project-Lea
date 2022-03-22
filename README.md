@@ -73,7 +73,12 @@ cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019" <br>
 cmake .. -D_APPLE_=TRUE -G"Xcode" <br>
 make <br>
 
-At the root of the folder "SDF - Rays", create a new folder named 
+At the root of the folder "SDF - Rays", create a new folder named "external" in which you will put the source code for Eigen (we made our tests with eigen-3.3.9 https://gitlab.com/libeigen/eigen/-/releases/3.3.9) and cmake modules from https://github.com/rpavlik/cmake-modules :
+
+<img src="ReadMe/sdf-external.PNG"
+     alt="external folder"
+     style="float: left; margin-right: 10px;" />
+
 You can create a new folder and place all the meshes obtained from the Blender export. Don't forget to change the paths in src_gpu > main.cpp :
 
 <img src="ReadMe/sdf-path.PNG"
@@ -114,6 +119,8 @@ The resulting tetrahedralized meshes will be in the folder named "tetrahedralize
 You first need to install POSA on your device. You can follow the instructions on their GitHub page : 
 https://github.com/mohamedhassanmus/POSA
 
-### Changes in the code
+### Usage
+
+You can now add 
 
 
