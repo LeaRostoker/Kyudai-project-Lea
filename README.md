@@ -61,31 +61,20 @@ This requires easy work on Blender but it will facilitate the next steps.
 
 ### SDF - Rays
 
-#### Requirments
-Visual Studio
+#### REQUIREMENTS
+Visual Studio <br>
+Anaconda -> Python 3.x <br>
+cmake <br>
+CUDA <br>
+cudnn <br>
 
-Anaconda -> Python 3.x
-
-cmake
-
-CUDA
-
-cudnn
-
-#### Installation
-Run cmake file
-
-mkdir build
-
-cd build
-
-cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019"
-
-cmake .. -D_APPLE_=TRUE -G"Xcode"
-
-make
-
-
+#### INSTALL
+Run cmake file <br>
+mkdir build <br>
+cd build <br>
+cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019" <br>
+cmake .. -D_APPLE_=TRUE -G"Xcode" <br>
+make <br>
 
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
