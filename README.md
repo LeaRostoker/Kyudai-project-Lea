@@ -170,5 +170,5 @@ You will see this kind of rendering of the init points : they should be above th
 
 <img src="ReadMe/posa-initpoints.PNG"
      alt="change path in main.cpp"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px; width: 500px;" />
 
