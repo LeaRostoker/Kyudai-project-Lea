@@ -50,8 +50,6 @@ Once you're satisfied with your scene, in "Scripting", click the play button to 
 
 ## Use the SDF algorithm
 
-
-
 ### Two methods to compute the SDF and semantics files
 Now that your data is ready, you can get the SDF and semantic description of your scene. 
 To do so, you can use either of the SDF folders in this repository. They both output the same files but using different methods, thus the results might differ. 
@@ -87,6 +85,20 @@ In the folder you chose for the ouput you can now find three files :
     - the resulting mesh (sdf_out_model.ply)
     - the sdf file (sdf.bin)
     - the semantic file (label.bin)
+
+### Make the obtained files usables by POSA 
+
+POSA works in Python and thus uses .npy files instead of .bin for the SDF and the semantics.
+Use these two lines of code to rewrite your .bin files in .npy :
+'''
+import numpy as np
+
+arr = np.fromfile('sdf.bin', dtype=np.float32)
+np.save('office-model_sdf.npy', arr)
+
+arr = np.fromfile('label.bin', dtype=np.int32)
+np.save('office-model_semantics.npy', arr)
+'''
 
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
