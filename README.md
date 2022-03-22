@@ -31,12 +31,13 @@ First, make you organize your meshes properly in your scene :
   - the collection should be named according to POSA's semantic naming (https://github.com/mohamedhassanmus/POSA/blob/main/mpcat40.tsv)
   - 
 In the SDF folder that you chose, you will find a Python script (BlenderScript) that you will need to add to your Blender mesh file.
-In scripting，choose Add 
+In Scripting，click on "+ New" and name your file.
 
 <img src="ReadMe/Blender-script.PNG"
      alt="add script to blender file"
      style="float: left; margin-right: 10px;" />
-
+     
+Then you can add the code. Yopu will find it in the SDF folder you chose, it's named "BlenderScript".
 
 ## POSA 
 ### Installation 
