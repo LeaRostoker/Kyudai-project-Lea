@@ -121,6 +121,12 @@ https://github.com/mohamedhassanmus/POSA
 
 ### Usage
 
-You can now add 
+You can now add the SDF and semantics obtained from the SDF algorithm described above, to the right folders for POSA to use.
+You should put 'your scene name'_sdf.npy and 'your scene name'_semantics.npy in POSA_dir > sdf. And your orginal scene can go in POSA_dir > scenes : 
+
+<img src="ReadMe/posa-scenedir.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+     
 
 
