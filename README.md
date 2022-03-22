@@ -9,7 +9,6 @@ To achive that goal, we used multiple existing projects such as POSA (https://gi
 
 This is still a work in progress, the application is not fully done but if you want to use want we have now, please follow the tutorial bellow.
 
-#Tutorial
 
 # Place multiple characters in a room using POSA 
 
@@ -74,6 +73,7 @@ cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019" <br>
 cmake .. -D_APPLE_=TRUE -G"Xcode" <br>
 make <br>
 
+At the root of the folder "SDF - Rays", create a new folder named 
 You can create a new folder and place all the meshes obtained from the Blender export. Don't forget to change the paths in src_gpu > main.cpp :
 
 <img src="ReadMe/sdf-path.PNG"
@@ -100,9 +100,11 @@ arr = np.fromfile('label.bin', dtype=np.int32)
 np.save('office-model_semantics.npy', arr)
 ```
 
+You can change the name of the resulting files to 'your scene name'_sdf.npy and 'your scene name'_semantics.npy
+
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
-For the tetrahedralization, place your mesh in the folder.
+For the tetrahedralization, use the folder named in this repository.
 
 
 ## POSA 
