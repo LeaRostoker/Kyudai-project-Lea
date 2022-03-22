@@ -15,7 +15,14 @@ This is still a work in progress, the application is not fully done but if you w
 ### What is an SDF and why do we need it ?
 
 SDF stands for Signed Distance Function (or Field). It is a way of describing a 2D or 3D environment and it is used by POSA to place characters in a scene.
-Thus, if we want to use POSA with our own custom scene, we will need this file for each new scene mesh we create
+Thus, if we want to use POSA with our own custom scene, we will need this file for each new scene mesh we create. 
+
+### The algorithm and how to use it 
+We created two versions of an algorithm to compute these SDF files 
+
+## Semantics 
+POSA also needs files describing the scene's semantics. Our algorithm described above also handle the creation of the semantic files.
+However you need to prepare your mesh in a certain way 
 
 ## POSA 
 ### Installation 
