@@ -85,6 +85,12 @@ You can create a new folder and place all the meshes obtained from the Blender e
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
+And make sure to change the root path as well in main.cpp : 
+
+<img src="ReadMe/sdf-rootpath.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
 And you can now click on the play button in Visual Studio to run the code.
 In the folder you chose for the ouput you can now find three files :
     - the resulting mesh (sdf_out_model.ply)
@@ -134,5 +140,12 @@ You will only need to add this line of code in this file :
 {"min": [-5.12, -5.12, -5.12], "max": [5.12, 5.12, 5.12], "dim": 256, "bbox": [[5.12, 5.12, 10.22], [-5.12, -5.12, -0.02]], "badding_val": 6.3, "voxel_size": [0.04, 0.04, 0.04]}
 ```
 
-Make sure to change the values according to the ones you entered in the SDF algorithm previously. "voxel_size corresponds to 
+Make sure to change the values according to the ones you entered in the SDF algorithm previously. 
+    "voxel_size" corresponds to GRID_SIZE_X, GRID_SIZE_Y, GRID_SIZE_Z.
+    "dim" corresponds to GRID_SZE.
+
+<img src="ReadMe/sdf-gridparams.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
 
