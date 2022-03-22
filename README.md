@@ -127,6 +127,12 @@ You should put 'your scene name'_sdf.npy and 'your scene name'_semantics.npy in 
 <img src="ReadMe/posa-scenedir.PNG"
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
-     
 
+Will also need to create a JSON file named 'your scene name'.json.
+You will only need to add this line of code in this file : 
+```
+{"min": [-5.12, -5.12, -5.12], "max": [5.12, 5.12, 5.12], "dim": 256, "bbox": [[5.12, 5.12, 10.22], [-5.12, -5.12, -0.02]], "badding_val": 6.3, "voxel_size": [0.04, 0.04, 0.04]}
+```
+
+Make sure to change the values according to the ones you entered in the SDF algorithm previously. "voxel_size corresponds to 
 
