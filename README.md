@@ -170,8 +170,8 @@ Make sure to change the values according to the ones you entered in the SDF algo
     - "min": [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2  ]
     - "max": [ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2  ]
 
-For now you can add thoses values to "bbox" and "badding_val" : 
-    - "bbox": [[ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2 + badding_val ], [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2 + badding_val ]]
+For now you can add thoses values to "bbox" and "badding_val" : <br>
+    - "bbox": [[ GRID_RES_X * GRID_SIZE / 2 ,  GRID_RES_Y * GRID_SIZE / 2,  GRID_RES_Y * GRID_SIZE / 2 + badding_val ], [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2 + badding_val ]] <br>
     - "badding_val": 0.0
 
 You will need to adjust badding_val. To do so, we recommend to try POSA with this : 
