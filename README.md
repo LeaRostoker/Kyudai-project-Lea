@@ -90,7 +90,7 @@ In the folder you chose for the ouput you can now find three files :
 
 POSA works in Python and thus uses .npy files instead of .bin for the SDF and the semantics.
 Use these two lines of code to rewrite your .bin files in .npy :
-'''
+```
 import numpy as np
 
 arr = np.fromfile('sdf.bin', dtype=np.float32)
@@ -98,7 +98,7 @@ np.save('office-model_sdf.npy', arr)
 
 arr = np.fromfile('label.bin', dtype=np.int32)
 np.save('office-model_semantics.npy', arr)
-'''
+```
 
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
