@@ -76,8 +76,17 @@ cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019" <br>
 cmake .. -D_APPLE_=TRUE -G"Xcode" <br>
 make <br>
 
+You can create a new folder and place all the meshes obtained from the Blender export. Don't forget to change the paths in src_gpu > main.cpp :
+And you can now click on the play button in Visual Studio to run the code.
+In the folder you chose for the ouput you can now find three files :
+    - the resulting mesh
+    - the sdf file
+    - 
+
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
+For the tetrahedralization, place your mesh in the folder.
+
 
 ## POSA 
 ### Installation 
