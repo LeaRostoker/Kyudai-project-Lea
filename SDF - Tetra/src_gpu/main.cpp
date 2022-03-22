@@ -11,7 +11,6 @@ SYSTEMTIME current_time, last_time;
 
 string root_path = "C:/Users/learo/Desktop/SDF/";
 
-//int GRID_SIZE = 256;
 const int GRID_SIZE = 256; 
 float GRID_RES_X = 0.05f;
 float GRID_RES_Y = 0.05f;
