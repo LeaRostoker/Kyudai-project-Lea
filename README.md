@@ -192,7 +192,7 @@ To do so, run POSA on the first character of your choice. Once it is completed, 
 
 Then change the function used in the SDF algorithm in main.cpp to UpdateSDF like this :
 
-<img src="ReadMe/posa-updatesdf.PNG"
-     alt="change function ran to UpdateSDF in main.cpp"
+<img src="ReadMe/sdf-updatesdf.PNG"
+     alt="change function to UpdateSDF in main.cpp"
      style="float: left; margin-right: 10px;" />
 
