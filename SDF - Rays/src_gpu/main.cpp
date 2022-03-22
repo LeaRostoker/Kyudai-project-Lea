@@ -80,7 +80,7 @@ void UpdateSDF(string input_path, string output_path, string output_path_tsdf) {
     std::string scene_labels_path = "";
     std::string avatar_path = "";
 
-    for (const auto& entry : fs::directory_iterator(input_path + "seiko/")) {
+    for (const auto& entry : fs::directory_iterator(input_path + "myScene/")) {
         std::string file_ext = entry.path().string();
         std::cout << "file_ext : " << file_ext << std::endl;
         auto start = 0U;
@@ -256,7 +256,7 @@ void CreateLevelSet (string input_path, string output_path, string output_path_t
     std::string delimiter4 = " ";
 
 
-    for (const auto& entry : fs::directory_iterator(input_path + "shawn/")) {
+    for (const auto& entry : fs::directory_iterator(input_path + "myScene/")) {
         std::string file_ext = entry.path().string();
         std::cout << "file_ext : " << file_ext << std::endl;
         auto start = 0U;
