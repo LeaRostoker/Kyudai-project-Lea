@@ -63,17 +63,26 @@ This requires easy work on Blender but it will facilitate the next steps.
 
 #### Requirments
 Visual Studio
+
 Anaconda -> Python 3.x
+
 cmake
+
 CUDA
+
 cudnn
 
 #### Installation
 Run cmake file
+
 mkdir build
+
 cd build
+
 cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019"
+
 cmake .. -D_APPLE_=TRUE -G"Xcode"
+
 make
 
 
