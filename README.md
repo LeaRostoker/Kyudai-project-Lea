@@ -91,7 +91,13 @@ And make sure to change the root path as well in main.cpp :
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
-In main.cpp, make sure to change GRID_SIZE, GRID_RES_X, GRID_RES_Y, GRID_RES_Z as needed : 
+Finally for the paths, make sure to change the circled area bellow to the folder cointaining your scene meshes : 
+
+<img src="ReadMe/sdf-meshfoldercreate.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
+In main.cpp, make sure to adjust GRID_SIZE, GRID_RES_X, GRID_RES_Y, GRID_RES_Z as needed : 
 
 <img src="ReadMe/sdf-gridparams.PNG"
      alt="change path in main.cpp"
@@ -196,3 +202,17 @@ Then change the function used in the SDF algorithm in main.cpp to UpdateSDF like
      alt="change function to UpdateSDF in main.cpp"
      style="float: left; margin-right: 10px;" />
 
+Make sure to change the circled area bellow to the folder where you will put the latest sdf.bin and label.bin files obtained, as well as the posed character's mesh obtained from POSA previously : 
+
+<img src="ReadMe/sdf-meshfolderupdate.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
+You can now run the program and you will obtain a new sdf.bin and label.bin describing the scene with the new character inside it.
+Now if you want to add another character, repeat the steps explained above to make POSA work but give POSA the newly obtained sdf and label files (that you will have to turn again from .bin to .npy and so on).
+
+You can repeat all thoses steps with all the characters you want to add to the scene.
+This part of the project is complicated and requires a lot of time and energy.
+We are currently working on "linking" POSA and the SDF algorithm so that you can add multiple characters in a scene in fewer steps.
+
+# Make your characters move in your scene using SAMP
