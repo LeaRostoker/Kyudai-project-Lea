@@ -443,8 +443,8 @@ int main(int argc, char** argv)
     cout << "GPU " << devID << " memory: free=" << free << ", total=" << total << endl;
        
 
-    //CreateLevelSet(root_path + "public-room/", root_path + "public-room/output/office-model.ply", root_path + "public-room/output/");
-    UpdateSDF(root_path + "public-room/", root_path + "public-room/output/office-model.ply", root_path + "public-room/output/");
+    CreateLevelSet(root_path + "public-room/", root_path + "public-room/output/sdf_out_model.ply", root_path + "public-room/output/");
+    //UpdateSDF(root_path + "public-room/", root_path + "public-room/output/office-model.ply", root_path + "public-room/output/");
     
     return 0;
 }

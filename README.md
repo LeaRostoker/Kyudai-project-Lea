@@ -29,21 +29,21 @@ First, make you organize your meshes properly in your scene :
   - the collection should be named according to POSA's semantic naming (https://github.com/mohamedhassanmus/POSA/blob/main/mpcat40.tsv)
 
     <img src="ReadMe/Blender-collections.PNG"
-     alt="add script to blender file"
-     style="float: left; margin-right: 10px;" />
+        alt="Organize in collections"
+        style="float: left; margin-right: 10px;" />
 
 In the SDF folder that you chose, you will find a Python script (BlenderScript) that you will need to add to your Blender mesh file.
 In "Scripting"，click on "+ New" and name your file.
 
 <img src="ReadMe/Blender-script.PNG"
-     alt="add script to blender file"
+     alt="add script to Blender file"
      style="float: left; margin-right: 10px;" />
      
 Then you can add the code. Yopu will find it in the SDF folder you chose, it's named "BlenderScript", just copy/paste it into Blender.
 Don't forget to change the path of the export folder.
 
 <img src="ReadMe/Blender-path.PNG"
-     alt="add script to blender file"
+     alt="change path in Blender script"
      style="float: left; margin-right: 10px;" />
 
 Once you're satisfied with your scene, in "Scripting", click the play button to export each part of your scene to the desired folder.
@@ -77,11 +77,16 @@ cmake .. -D_APPLE_=TRUE -G"Xcode" <br>
 make <br>
 
 You can create a new folder and place all the meshes obtained from the Blender export. Don't forget to change the paths in src_gpu > main.cpp :
+
+<img src="ReadMe/sdf-path.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
 And you can now click on the play button in Visual Studio to run the code.
 In the folder you chose for the ouput you can now find three files :
-    - the resulting mesh
-    - the sdf file
-    - 
+    - the resulting mesh (sdf_out_model.ply)
+    - the sdf file (sdf.bin)
+    - the semantic file (label.bin)
 
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
