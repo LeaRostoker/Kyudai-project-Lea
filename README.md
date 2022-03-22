@@ -172,3 +172,8 @@ You will see this kind of rendering of the init points : they should be above th
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px; width: 500px;" />
 
+In your POSA folder, in scr > misc_utils.py, you may also need to adjust offset_x and offset_y so that the init points don't spred wider than your scene or aren't in a too small area :
+
+<img src="ReadMe/posa-createinitpts.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px; width: 500px;" />
