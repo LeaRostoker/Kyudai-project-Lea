@@ -212,6 +212,7 @@ You can now run the program and you will obtain a new sdf.bin and label.bin desc
 Now if you want to add another character, repeat the steps explained above to make POSA work but give POSA the newly obtained sdf and label files (that you will have to turn again from .bin to .npy and so on).
 
 You can repeat all thoses steps with all the characters you want to add to the scene.
+You don't need to change the JSON file anymore though.
 This part of the project is complicated and requires a lot of time and energy.
 We are currently working on "linking" POSA and the SDF algorithm so that you can add multiple characters in a scene in fewer steps.
 
