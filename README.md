@@ -11,14 +11,12 @@ This is still a work in progress, the application is not fully done but if you w
 
 #Tutorial
 
+# Place multiple characters in a room using POSA 
+
 ## SDF
-### What is an SDF and why do we need it ?
 
 SDF stands for Signed Distance Function (or Field). It is a way of describing a 2D or 3D environment and it is used by POSA to place characters in a scene.
 Thus, if we want to use POSA with our own custom scene, we will need this file for each new scene mesh we create. 
-
-### The algorithm and how to use it 
-We created two versions of an algorithm to compute these SDF files 
 
 ## Semantics 
 
@@ -47,12 +45,27 @@ Don't forget to change the path of the export folder.
 <img src="ReadMe/Blender-path.PNG"
      alt="add script to blender file"
      style="float: left; margin-right: 10px;" />
-     
+
 Once you're satisfied with your scene, in "Scripting", click the play button to export each part of your scene to the desired folder.
 
-## Get 
+## Use the SDF algorithm
+
+### Two methods to compute the SDF and semantics files
+Now that your data is ready, you can get the SDF and semantic description of your scene. 
+To do so, you can use either of the SDF folders in this repository. They both output the same files but using different methods, thus the results might differ. 
+One uses a raycasting approach (SDF - Rays) whereas the other one requires a tetrahedralized mesh (SDF - Tetra). The SDF is then calculated by making tests on each single tetrahedra to know if our point is inside or outside of it.
+We recommend starting with the raycasting method as it requires less preparation. This method works well on scene filled with simple lowpoly / blocky furniture. If your scene is more complex, we advise you to make a "simple" version of it with really simple pieces of furniture. As long as it reproduces the volume of the object, it will work with POSA. In the end, you can replace the "simple" version of your scene by the original one. 
+This requires easy work on Blender but it will facilitate the next steps.
+
+### SDF - Rays
+
+
+### SDF - Tetra
+If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
+
 ## POSA 
 ### Installation 
+
 You first need to install POSA on your device. You can follow the instructions on their GitHub page : 
 https://github.com/mohamedhassanmus/POSA
 
