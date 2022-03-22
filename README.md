@@ -42,7 +42,7 @@ Then you can add the code. Yopu will find it in the SDF folder you chose, it's n
 Don't forget to change the path of the export folder.
 
 <img src="ReadMe/Blender-path.PNG"
-     alt="change path in Blender script"
+     alt="change path of export folder in Blender script"
      style="float: left; margin-right: 10px;" />
 
 Once you're satisfied with your scene, in "Scripting", click the play button to export each part of your scene to the desired folder.
@@ -94,19 +94,19 @@ And make sure to change the root path as well in main.cpp :
 Finally for the paths, make sure to change the circled area bellow to the folder cointaining your scene meshes : 
 
 <img src="ReadMe/sdf-meshfoldercreate.PNG"
-     alt="change path in main.cpp"
-     style="float: left; margin-right: 10px;" />
+     alt="write the right input folder path"
+     style="float: left; margin-right: 10px; width: 600px;" />
 
 In main.cpp, make sure to adjust GRID_SIZE, GRID_RES_X, GRID_RES_Y, GRID_RES_Z as needed : 
 
 <img src="ReadMe/sdf-gridparams.PNG"
-     alt="change path in main.cpp"
+     alt="adjust grid parameters"
      style="float: left; margin-right: 10px;" />
 
 For this part part we will be using the function CreateLevelSet of main.cpp so make sure it looks like this in the main function : 
 
 <img src="ReadMe/sdf-createlevelset.PNG"
-     alt="change path in main.cpp"
+     alt="use CreateLevelSet in main function of main.cpp"
      style="float: left; margin-right: 10px;" />
 
 
@@ -150,7 +150,7 @@ You can now add the SDF and semantics obtained from the SDF algorithm described 
 You should put 'your scene name'_sdf.npy and 'your scene name'_semantics.npy in POSA_dir > sdf. And your orginal scene can go in POSA_dir > scenes : 
 
 <img src="ReadMe/posa-scenedir.PNG"
-     alt="change path in main.cpp"
+     alt="add semantics and sdf files in POSA_dir sdf folder"
      style="float: left; margin-right: 10px;" />
 
 Will also need to create a JSON file named 'your scene name'.json.
@@ -164,7 +164,7 @@ Make sure to change the values according to the ones you entered in the SDF algo
     "dim" corresponds to GRID_SZE.
 
 <img src="ReadMe/sdf-gridparams.PNG"
-     alt="change path in main.cpp"
+     alt="SDF grid parameters"
      style="float: left; margin-right: 10px;" />
 
     - "min": [ - GRID_RES_X * GRID_SIZE / 2 ,  - GRID_RES_Y * GRID_SIZE / 2,  - GRID_RES_Y * GRID_SIZE / 2  ]
@@ -182,13 +182,13 @@ python src/affordance.py --config cfg_files/contact_semantics.yaml --checkpoint_
 You will see this kind of rendering of the init points : they should be above the sitting area. If they are too low or too high, will fail at placing the characters. So you need to adjust badding_val and bbox (which is the data read by POSA) so that the placement of the charcter works. Make a couple tests to adjust it.
 
 <img src="ReadMe/posa-initpoints.PNG"
-     alt="change path in main.cpp"
+     alt="rendered init points"
      style="float: left; margin-right: 10px; width: 500px;" />
 
 In your POSA folder, in scr > misc_utils.py, you may also need to adjust offset_x and offset_y so that the init points don't spred wider than your scene or aren't in a too small area :
 
 <img src="ReadMe/posa-createinitpts.PNG"
-     alt="change path in main.cpp"
+     alt="addjust offset_x and offset_y in misc_utils > createinitpoints"
      style="float: left; margin-right: 10px;" />
 
 ### Add multiple characters
@@ -205,8 +205,8 @@ Then change the function used in the SDF algorithm in main.cpp to UpdateSDF like
 Make sure to change the circled area bellow to the folder where you will put the latest sdf.bin and label.bin files obtained, as well as the posed character's mesh obtained from POSA previously : 
 
 <img src="ReadMe/sdf-meshfolderupdate.PNG"
-     alt="change path in main.cpp"
-     style="float: left; margin-right: 10px;" />
+     alt="change input folder in UpdateSDF"
+     style="float: left; margin-right: 10px; width: 600px;" />
 
 You can now run the program and you will obtain a new sdf.bin and label.bin describing the scene with the new character inside it. <br>
 Now if you want to add another character, repeat the steps explained above to make POSA work but give POSA the newly obtained sdf and label files (that you will have to turn again from .bin to .npy and so on).
