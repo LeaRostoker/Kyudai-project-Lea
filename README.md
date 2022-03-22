@@ -97,6 +97,13 @@ In main.cpp, make sure to change GRID_SIZE, GRID_RES_X, GRID_RES_Y, GRID_RES_Z a
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px;" />
 
+For this part part we will be using the function CreateLevelSet of main.cpp so make sure it looks like this in the main function : 
+
+<img src="ReadMe/sdf-createlevelset.PNG"
+     alt="change path in main.cpp"
+     style="float: left; margin-right: 10px;" />
+
+
 And you can now click on the play button in Visual Studio to run the code.
 In the folder you chose for the ouput you can now find three files :
     - the resulting mesh (sdf_out_model.ply)
@@ -131,7 +138,7 @@ The resulting tetrahedralized meshes will be in the folder named "tetrahedralize
 You first need to install POSA on your device. You can follow the instructions on their GitHub page : 
 https://github.com/mohamedhassanmus/POSA
 
-### Usage
+### First use
 
 You can now add the SDF and semantics obtained from the SDF algorithm described above, to the right folders for POSA to use.
 You should put 'your scene name'_sdf.npy and 'your scene name'_semantics.npy in POSA_dir > sdf. And your orginal scene can go in POSA_dir > scenes : 
@@ -177,3 +184,8 @@ In your POSA folder, in scr > misc_utils.py, you may also need to adjust offset_
 <img src="ReadMe/posa-createinitpts.PNG"
      alt="change path in main.cpp"
      style="float: left; margin-right: 10px; width: 500px;" />
+
+### Add multiple characters
+
+Once these adjusments are done, we can start placing multiple characters in the scene.
+
