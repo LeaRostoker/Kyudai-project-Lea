@@ -104,7 +104,8 @@ You can change the name of the resulting files to 'your scene name'_sdf.npy and 
 
 ### SDF - Tetra
 If you chose this method, you will have to prepare the tetrahedralized mesh first and the following steps will be the same as above.
-For the tetrahedralization, use the folder named in this repository.
+Use the folder named Tetrahedralization in this repository. Place the meshes extracted from Blender in the folder named blenderOut and run the python file named tetrahedralize.py.
+The resulting tetrahedralized meshes will be in the folder named "tetrahedralized"
 
 
 ## POSA 
