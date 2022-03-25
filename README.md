@@ -1,4 +1,4 @@
-# Kyuday-project-Lea
+# Kyudai-project-Lea
 
 This repository contains the work I have done during my intership at Kyushu University from August 2021 until March 2022.
 My work focused on animating characters in complex environments such as rooms filled with pieces of furniture. In the future, we'll aim at making an application for interior designers, architects or anyone interested, to visualize in VR the 3D environments they created.
