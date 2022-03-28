@@ -65,11 +65,16 @@ cmake <br>
 CUDA <br>
 cudnn <br>
 
-#### INSTALL
+#### INSTALL For Windows:
 Run cmake file <br>
 mkdir build <br>
 cd build <br>
 cmake .. -D_CUDA_=TRUE -G"Visual Studio 16 2019" <br>
+
+#### INSTALL For IOS:
+Run cmake file <br>
+mkdir build <br>
+cd build <br>
 cmake .. -D_APPLE_=TRUE -G"Xcode" <br>
 make <br>
 
